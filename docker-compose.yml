@@ -2,7 +2,7 @@ version: '3'
 services:
   grafana:
     logging: {driver: "json-file", options: {max-size: "1m", max-file: "3"}}
-    image: grafana/grafana
+    image: grafana/grafana:6.5.0-beta1
     ports:
       - "127.0.0.1:3000:3000"
     volumes:
