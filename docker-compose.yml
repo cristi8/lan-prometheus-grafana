@@ -15,9 +15,10 @@ services:
   prometheus:
     logging: {driver: "json-file", options: {max-size: "1m", max-file: "3"}}
     image: prom/prometheus
+    ports:
+      - "9090:9090"
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - /etc/prometheus/targets:/etc/prometheus/targets
       - /var/lib/prometheus:/prometheus
     restart: always
-
