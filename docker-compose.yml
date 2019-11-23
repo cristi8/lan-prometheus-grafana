@@ -19,7 +19,5 @@ services:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - /etc/prometheus/targets:/etc/prometheus/targets
       - /var/lib/prometheus:/prometheus
-    ports:
-      - "9090:9090"
     restart: always
 
